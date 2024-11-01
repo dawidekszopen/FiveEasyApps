@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XO8KKIqVFDU=",
+  "dgSpecHash": "bbSjTYU8YZg=",
   "success": true,
   "projectFilePath": "/home/dawidek/Desktop/FiveEasyApps/ToDoList/ToDoList/ToDoList.csproj",
   "expectedPackageFiles": [
@@ -34,7 +34,7 @@
     "/home/dawidek/.nuget/packages/system.io.pipelines/6.0.0/system.io.pipelines.6.0.0.nupkg.sha512",
     "/home/dawidek/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/home/dawidek/.nuget/packages/tmds.dbus.protocol/0.16.0/tmds.dbus.protocol.0.16.0.nupkg.sha512",
-    "/home/dawidek/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.8/microsoft.aspnetcore.app.ref.8.0.8.nupkg.sha512"
+    "/home/dawidek/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
   ],
   "logs": []
 }

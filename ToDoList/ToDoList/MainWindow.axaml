@@ -4,6 +4,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="ToDoList.MainWindow"
-        Title="ToDoList">
-    Welcome to Avalonia!
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        Width="800"
+        Height="600"
+        Title="To-Do List">
+    
+    <Window.Styles>
+        <Style Selector="TextBlock.TodoText">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="10, 0"/>
+        </Style>
+        
+        <Style Selector="WrapPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </Window.Styles>
+    
+    <StackPanel
+        Margin="50">
+        
+        <WrapPanel>
+            <Button
+                FontWeight="Bold"
+                FontSize="15"
+                Margin="5 0"
+                VerticalAlignment="Center"
+                Content="Pokaż:"
+                Click="ShowFiltry"
+                />
+            <ComboBox
+                x:Name="Filter"
+                SelectedIndex="0">
+                <ComboBoxItem Content="Wszystko"/>
+                <ComboBoxItem Content="Zrobione"/>
+                <ComboBoxItem Content="Do zrobienia"/>
+            </ComboBox>
+           
+        </WrapPanel>
+
+        <ListBox
+            DoubleTapped="DeleteTodo"
+            Margin="20"
+            x:Name="ToDoList"
+            Width="200"
+            Height="250">
+            <ListBoxItem>
+                <WrapPanel>
+                    <TextBlock Text="123" 
+                               Classes="TodoText"/>
+                    <CheckBox IsChecked="True"/>
+                </WrapPanel>
+            </ListBoxItem>
+        </ListBox>
+        <WrapPanel>
+            <TextBox Width="200" Margin="5, 0" Watermark="twoje zadanie" x:Name="ToDoText"/>
+            <Button Content="dodaj zadanie" Click="AddTodo"/>
+        </WrapPanel>
+        <TextBlock x:Name="DebugTextBlock"/>
+    </StackPanel>
 </Window>
