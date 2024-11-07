@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SurveyCreator.NewPytanie"
+        Title="Nowe Pytanie"
+        Width="400"
+        Height="500"
+        WindowStartupLocation="CenterScreen"
+        RequestedThemeVariant="Light"
+        CanResize="False"
+        >
+    <Window.Styles>
+        <Style Selector="TextBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </Window.Styles>
+    
+    <StackPanel
+        HorizontalAlignment="Center">
+        
+        <TextBlock Text="Dodaj pytanie:" FontSize="20" Margin="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+        
+        <TextBox Watermark="Treść pytania" x:Name="Pytanie" Width="200" />
+        
+        <Border BorderBrush="Black" BorderThickness="0,0,0,1" Margin="10"/>
+        
+        <TextBox Watermark="odpowiedź 1" Width="200" x:Name="Odp1"/>
+        <TextBox Watermark="odpowiedź 2" Width="200" x:Name="Odp2"/>
+        <TextBox Watermark="odpowiedź 3" Width="200" x:Name="Odp3"/>
+        <TextBox Watermark="odpowiedź 4" Width="200" x:Name="Odp4"/>
+        
+        <Border BorderBrush="Black" BorderThickness="0,0,0,1" Margin="10"/>
+        
+        <TextBox Watermark="Kategoria pytania" Width="200" x:Name="Kategoria"/>
+        
+        <Border BorderBrush="Black" BorderThickness="0,0,0,1" Margin="10"/>
+        
+        <StackPanel Margin="5"
+                    HorizontalAlignment="Center">
+            <RadioButton GroupName="Options" Content="jednokrotnego wyboru" x:Name="OneOptions" IsChecked="True"/>
+            <RadioButton GroupName="Options" Content="wielokrotnego wyboru" x:Name="FewOptions"/>
+        </StackPanel>
+        
+        <Button Content="Dodaj Pytanie" x:Name="AddPytanie" HorizontalAlignment="Center" Click="SendPytanie"/>
+    </StackPanel>
+</Window>

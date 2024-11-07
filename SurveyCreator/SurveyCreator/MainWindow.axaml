@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SurveyCreator.MainWindow"
+        Title="SurveyCreator"
+        Width="500"
+        Height="800"
+        WindowStartupLocation="CenterScreen"
+        RequestedThemeVariant="Light"
+        CanResize="False"
+        >
+    
+    
+    <StackPanel HorizontalAlignment="Center">
+        <TextBlock Text="Kreator Ankiet" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center"/>
+        
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+            <Button
+                FontWeight="Bold"
+                FontSize="15"
+                Margin="5 0"
+                VerticalAlignment="Center"
+                Content="Zmień Kategorie:"
+                Click="PokazFiltry"
+            />
+            
+            <ComboBox  x:Name="KategoriaComboBox" Width="200" SelectedIndex="0">
+                <ComboBoxItem Content="Wszystko"/>
+            </ComboBox>
+        </StackPanel>
+        
+        <Button Content="Dodaj nowe pytanie" x:Name="AddPytanie" 
+                HorizontalAlignment="Center" Margin="10" Click="NewPytanieNewPytanie"/>
+        
+ 
+        <ListBox HorizontalAlignment="Center" Width="500" x:Name="Ankieta" MaxWidth="550">
+            
+        </ListBox>
+    </StackPanel>
+</Window>
