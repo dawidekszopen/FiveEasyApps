@@ -1,0 +1,21 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+        <Style Selector="TextBlock.NazwaProduktu">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        
+        <Style Selector="TextBlock.CenaProduktu">
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>    
+        <Style Selector="TextBlock.KategoriaProduktu">
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+</Styles>

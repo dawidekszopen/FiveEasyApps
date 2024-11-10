@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ProductCatalog.EditWindow"
+        Title="Edytuj Produkt"
+        RequestedThemeVariant="Light"
+        Width="500"
+        Height="200">
+    <Window.Styles>
+        <StyleInclude Source="Style.axaml"/>
+    </Window.Styles>
+    
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20" VerticalAlignment="Center">
+        <Image Source="avares://ProductCatalog/Assets/Image/bulka.jpg" 
+               Width="100" Height="100" Margin="0,0,10,0" VerticalAlignment="Center" x:Name="Image"/>
+        <StackPanel>
+            <TextBox Text="Bułka" Classes="NazwaProduktu" x:Name="Nazwa"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Cena:" FontStyle="Italic" VerticalAlignment="Center"/>
+                <TextBox Text="12zł" Classes="CenaProduktu" x:Name="Cena"/>
+            </StackPanel>
+                        
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Kategoria:" FontStyle="Italic" VerticalAlignment="Center"/>
+                <TextBox Text="jedzenie" Classes="KategoriaProduktu" x:Name="Kategoria"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Dosępny:" VerticalAlignment="Center"/>
+                <CheckBox x:Name="Dostępny"/>
+            </StackPanel>
+        </StackPanel>
+        <Button Content="Akceptuj zmiany" VerticalAlignment="Center" Margin="20" Click="EdytujProdukt"/>
+    </StackPanel>
+</Window>
