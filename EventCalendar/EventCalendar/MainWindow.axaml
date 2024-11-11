@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="800"
+        Width="600"
+        Height="800"
+        RequestedThemeVariant="Light"
+        CanResize="False"
+        x:Class="EventCalendar.MainWindow"
+        Title="Event Calendar">
+    <StackPanel HorizontalAlignment="Center">
+        <TextBlock Text="Kalendarz Wydarzeń" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
+        
+        <TextBox Watermark="Nazwa wydarzenia" x:Name="WydarzenieName" Margin="20" Width="250" HorizontalAlignment="Center"/>
+        <TextBox Watermark="Opis wydarzenia" x:Name="WydarzenieOpis" Margin="0,0,0, 20" Width="250" HorizontalAlignment="Center"/>
+        <ComboBox Margin="0,0,0, 20" Width="200" HorizontalAlignment="Center" SelectedIndex="7" x:Name="DniTygodnia">
+            <ComboBoxItem>Poniedziałek</ComboBoxItem>
+            <ComboBoxItem>Wtorek</ComboBoxItem>
+            <ComboBoxItem>Środa</ComboBoxItem>
+            <ComboBoxItem>Czwartek</ComboBoxItem>
+            <ComboBoxItem>Piątek</ComboBoxItem>
+            <ComboBoxItem>Sobota</ComboBoxItem>
+            <ComboBoxItem>Niedziela</ComboBoxItem>
+            <ComboBoxItem>Dni Tygodnia</ComboBoxItem>
+        </ComboBox>
+        <Button Margin="0,0,0, 20" HorizontalAlignment="Center" Content="Dodaj Wydarzenie" Click="DodajWydarzenie"/>
+        
+        <ListBox x:Name="ListaWydarzen" DoubleTapped="ShowWydarzenie">
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock Text="Praca" FontWeight="Bold" FontSize="18"/>
+                    <TextBlock Text="Poniedziałek"/>
+                    <TextBlock Text="Lorem ipsu..."/>
+                    <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." IsVisible="False"/>
+                    <CheckBox Content="Ulubione"/>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+    </StackPanel>
+</Window>

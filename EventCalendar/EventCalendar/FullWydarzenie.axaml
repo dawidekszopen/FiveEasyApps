@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="200"
+        Width="200"
+        Height="200"
+        RequestedThemeVariant="Light"
+        x:Class="EventCalendar.FullWydarzenie"
+        Title="FullWydarzenie">
+    <StackPanel HorizontalAlignment="Center" Margin="20">
+        <TextBlock Text="Nazwa" FontWeight="Bold" FontSize="18" TextWrapping="Wrap" Margin="0,0,0,5" x:Name="Nazwa"/>
+        
+        <Border BorderBrush="Black" BorderThickness="0,0,0,2" Margin="0,0,0,5"/>
+        
+        <TextBlock Text="Dzień tygodnia" Margin="0,0,0,5" x:Name="DzienTyg"/>
+        
+        <Border BorderBrush="Black" BorderThickness="0,0,0,2" Margin="0,0,0,5"/>
+
+        <TextBlock Text="Opisssssssssssssssssssssssssssssssssssssssssssss" TextWrapping="Wrap" Margin="0,0,0,5" x:Name="Opis"/>
+        
+        <Border BorderBrush="Black" BorderThickness="0,0,0,2" Margin="0,0,0,5"/>
+        
+        <CheckBox Content="Ulubione" x:Name="Ulubione"/>
+    </StackPanel>
+</Window>
